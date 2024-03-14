@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Show People</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+    <h1>People List</h1>
+    <ul>
+        {% for person in people %}
+        <li>{{ person.username }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/add/">Add Person</a>
+</body>
+</html>
